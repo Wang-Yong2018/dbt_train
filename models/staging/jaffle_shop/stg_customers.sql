@@ -3,7 +3,8 @@ WITH customers AS (
             "ID" AS customer_id,
             first_name,
             last_name
-           FROM airbyte.jaffle_shop_customers_csv
+            from {{source('jaffle_shop','customers')}}
+            
         )
 
 select * from customers

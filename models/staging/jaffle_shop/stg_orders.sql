@@ -6,7 +6,7 @@ with orders as (
         order_date,
         status
 
-    from dbt.airbyte.jaffle_shop_orders_csv
+    from {{source('jaffle_shop','orders')}}
 
 )
 

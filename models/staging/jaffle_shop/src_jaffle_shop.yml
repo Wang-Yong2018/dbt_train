@@ -5,7 +5,8 @@ sources:
     database: dbt
     schema: airbyte
     tables:
-      - name: jaffle_shop_customers_csv
+      - name: customers
+        identifier: jaffle_shop_customers_csv
         description: Raw customers data.
         columns:
           - name: ID
@@ -15,7 +16,8 @@ sources:
               - unique
               - not_null
             
-      - name: jaffle_shop_orders_csv
+      - name: orders
+        identifier: jaffle_shop_orders_csv
         description: Raw orders data.
         columns:
           - name: ID
