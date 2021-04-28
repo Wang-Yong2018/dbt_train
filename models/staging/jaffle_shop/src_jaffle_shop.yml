@@ -5,6 +5,10 @@ sources:
     database: dbt
     schema: airbyte
     tables:
+      - name: payment
+        identifier: stripe_payments_csv
+        description: stripe_payment
+        
       - name: customers
         identifier: jaffle_shop_customers_csv
         description: Raw customers data.

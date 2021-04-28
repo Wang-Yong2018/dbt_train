@@ -8,6 +8,6 @@ with payment as (
         orderid as order_id,
         paymentmethod as payment_method
 
-    from dbt.airbyte.stripe_payments_csv)
+    from {{source('jaffle_shop','payment')}})
 
 select * from payment
