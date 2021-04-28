@@ -1,0 +1,26 @@
+version: 2
+
+sources:
+  - name: jaffle_shop
+    database: dbt
+    schema: airbyte
+    tables:
+      - name: jaffle_shop_customers_csv
+        description: Raw customers data.
+        columns:
+          - name: ID
+            quote: True
+            description: Primary key for customers.
+            tests:
+              - unique
+              - not_null
+            
+      - name: jaffle_shop_orders_csv
+        description: Raw orders data.
+        columns:
+          - name: ID
+            description: Primary key for orders.
+            quote: True
+            tests:
+              - unique
+              - not_null            
